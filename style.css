@@ -22,7 +22,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('8sand.github.io/refs/heads/main/images/thumbs/Space.jpg'); /* INSERT IMAGE URL */
+  background-image: url('https://8sand.github.io/images/thumbs/Space.png'); /* INSERT IMAGE URL */
   background-size: cover;
   background-position: center;
   z-index: -1;
