@@ -34,10 +34,25 @@ body {
 .header {
   padding: 2rem;
   text-align: center;
-  color: white;
-  font-size: 2rem;
+  color: #50e5ff; /* light blue */
+  font-size: 2.5rem;
   letter-spacing: 2px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  /* subtle soft glow */
+  text-shadow: 0 0 6px rgba(80, 229, 255, 0.6);
+  /* gentle fade-in animation */
+  opacity: 0;
+  animation: fadeInHeader 1.8s ease forwards;
 }
+
+@keyframes fadeInHeader {
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 /* Paragraph Styling under Header */
@@ -53,6 +68,19 @@ p {
   font-weight: 400;
   box-shadow: none;
 }
+
+/* Content 2nd backgorund */
+.content {
+  position: relative;  /* create a stacking context */
+  background-color: rgba(14, 14, 14, 0.192); /* black with 60% opacity */
+  padding: 2rem; /* some padding so text doesn't touch edges */
+  border-radius: 12px; /* optional rounded corners */
+  max-width: 1200px; /* constrain width for aesthetics */
+  margin: 2rem auto; /* center horizontally with margin on top and bottom */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* subtle shadow for depth */
+  z-index: 1; /* make sure it's above the background */
+}
+
 
 /* Highlight change color */ 
 ::selection {
@@ -196,31 +224,128 @@ p {
   width: 100%;
 }
 
-.cursor-trail {
-  position: fixed;
-  width: 10px;
-  height: 10px;
-  background: #ffffff;
-  border-radius: 50%;
-  pointer-events: none;
-  mix-blend-mode: hard-light; 
-  opacity: 0.1;
-  transform: translate(-50%, -50%);
-  transition: all 0.40s ease-out;
-  z-index: 9999;
-  box-shadow: 0 0 8px #ffffff;
+/* Navbar: default horizontal menu */
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Mobile styles: stack menu items vertically and center */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(0, 0, 0, 0.7); /* semi-transparent bg */
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .nav-menu li a {
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+  }
+}
+
+
+
+  /* Portfolio Section */
+
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  background-color: #0f172a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project img {
+  width: 250px;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 10px #50e5ff88;
+}
+
+.project-description {
+  color: #e5f6f8;
+  max-width: 600px;
+}
+
+.project-description h3 {
+  color: #50e5ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.project-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .project-description {
+    max-width: 100%;
+  }
+}
+
+
+  /* Footer */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make sure it takes the full height */
+}
+
+.content {
+  flex: 1; /* This pushes the footer down if the content is short */
 }
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #000000; /* Match your nav bar */
-  color: #50e5ff; /* Light blue */
+  background-color: #000000;
+  color: #50e5ff;
   text-align: center;
-  padding: 1px 0;
-  font-size: 0.3rem;
-  z-index: 999;
+  padding: 10px 0;
+  font-size: 0.9rem;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
 }
+
+
+

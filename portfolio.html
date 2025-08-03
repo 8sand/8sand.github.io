@@ -6,101 +6,91 @@
   <title>Sukhdeep Sandhu</title>
   <link rel="icon" href="https://8sand.github.io/images/thumbs/SSLogo.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js"></script>
+
   <!-- Fonts Source -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="background"></div>
  
-  <div style="height: 80px;"></div> <!-- Spacer to avoid content under navbar -->
-
+  <div style="height: 80px;"></div> <!-- Space to avoid content under navbar -->
 
   <header class="header">
     <!-- Logo -->
     <h2>Sukhdeep Sandhu</h2>
   </header>
-  <div style="height: 5px;"></div>
-  <p>Coming soon</p>
+
+    <div class="content">
 
     <nav class="navbar">
     <ul class="nav-menu">
       <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
       <li><a href="portfolio.html" class="active"><i class="fas fa-folder"></i> Portfolio</a></li>
-      <li><a href="https://www.google.com" target="_blank"><i class="fas fa-envelope"></i> Resume</a></li>
+      <li><a href="https://static.vecteezy.com/system/resources/previews/003/582/701/non_2x/coming-soon-background-illustration-template-design-free-vector.jpg" target="_blank"><i class="fas fa-envelope"></i> Resume</a></li>
       <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 
-   <!-- Spacer to prevent navbar overlap -->
+   <!-- Space to prevent navbar overlap -->
    <div style="height:20px;"></div>
 
 
-  <main class="gallery">
-    <!-- Gallery imges with captions -->
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/ChessAI.png" alt="Project 1" />
-      <div class="caption">Caption 1</div>
+ <main class="portfolio-section">
+  <div class="project">
+    <img src="https://8sand.github.io/images/thumbs/ChessAI.png" alt="Project 1">
+    <div class="project-description">
+      <h3>Project 1 Title</h3>
+      <p>eeee</p>
     </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 2" />
-      <div class="caption">Caption 2</div>
+  </div>
+
+  <div class="project">
+    <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 2">
+    <div class="project-description">
+      <h3>Project 2 Title</h3>
+      <p>eeee</p>
     </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 3" />
-      <div class="caption">Caption 3</div>
+  </div>
+
+  <div class="project">
+    <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 3">
+    <div class="project-description">
+      <h3>Project 3 Title</h3>
+      <p>eeee</p>
     </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 4" />
-      <div class="caption">Caption 4</div>
+  </div>
+
+  <div class="project">
+    <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 4">
+    <div class="project-description">
+      <h3>Project 4 Title</h3>
+      <p>eeee</p>
     </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 5" />
-      <div class="caption">Caption 5</div>
+  </div>
+
+  <div class="project">
+    <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 5">
+    <div class="project-description">
+      <h3>Project 5 Title</h3>
+      <p>eeee</p>
     </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 6" />
-      <div class="caption">Caption 6</div>
+  </div>
+
+  <div class="project">
+    <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 6">
+    <div class="project-description">
+      <h3>Project 6 Title</h3>
+      <p>eeee</p>
     </div>
-  </main>
+  </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const trail = [];
-    const trailSize = 12;
+    <div style="height: 120px;"></div>
 
-    for (let i = 0; i < trailSize; i++) {
-      const dot = document.createElement("div");
-      dot.className = "cursor-trail";
-      document.body.appendChild(dot);
-      trail.push({ element: dot, x: 0, y: 0 });
-    }
+</main>
 
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
 
-    document.addEventListener("mousemove", (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    });
-
-    function animate() {
-      let x = mouseX;
-      let y = mouseY;
-
-      trail.forEach((dot, index) => {
-        const next = trail[index + 1] || { x: mouseX, y: mouseY };
-        dot.x += (next.x - dot.x) * 0.5;
-        dot.y += (next.y - dot.y) * 0.5;
-        dot.element.style.left = dot.x + "px";
-        dot.element.style.top = dot.y + "px";
-      });
-
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-  });
-</script>
+</div>
 
 <footer class="footer">
   <p>&copy; 2025 Sukhdeep Sandhu. All rights reserved.</p>
