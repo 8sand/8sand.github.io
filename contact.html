@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sukhdeep Sandhu</title>
+  <link rel="icon" href="https://8sand.github.io/images/thumbs/SSLogo.jpg" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <!-- Fonts Source -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -16,14 +17,8 @@
 
   <header class="header">
     <!-- Logo -->
-    <h1>Sukhdeep Sandhu</h1>
+    <h2>Sukhdeep Sandhu</h2>
   </header>
-  <div style="height: 5px;"></div>
-  <p>Hello! My name is Sukhdeep, and I just recently graduated from Computer Science at Concordia University.
-    Two of the things I enjoy the most about programming are creating cool things, and problem solving. 
-    I mainly code in Java, Python, Javascript and C#. My interests include studying astronomy, going to the gym,
-    playing basketball, playing video games, and spending time with my family. I am excited to meet and work with
-    new people, and contribute to a positive and collaborative environment. </p>
 
     <nav class="navbar">
     <ul class="nav-menu">
@@ -35,36 +30,97 @@
 </nav>
 
    <!-- Spacer to prevent navbar overlap -->
-   <div style="height:20px;"></div>
+   <div style="height:5px;"></div>
 
 
-  <main class="gallery">
-    <!-- Gallery imges with captions -->
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/ChessAI.png" alt="Project 1" />
-      <div class="caption">Caption 1</div>
+    <!-- Main content for contact page -->
+<section class="contact-section">
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <div class="button-group">
+      <button type="submit" class="btn send">Send</button>
+      <button type="reset" class="btn reset">Reset</button>
     </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 2" />
-      <div class="caption">Caption 2</div>
-    </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 3" />
-      <div class="caption">Caption 3</div>
-    </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 4" />
-      <div class="caption">Caption 4</div>
-    </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 5" />
-      <div class="caption">Caption 5</div>
-    </div>
-    <div class="image-card">
-      <img src="https://8sand.github.io/images/thumbs/SpaceBlack.png" alt="Project 6" />
-      <div class="caption">Caption 6</div>
-    </div>
-  </main>
+  </form>
+</section>
+
+<style>
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.contact-form {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(80, 229, 255, 0.2);
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  resize: vertical;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #50e5ff;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.send {
+  background: #50e5ff;
+  color: #000;
+  box-shadow: 0 0 10px #50e5ff80;
+}
+
+.send:hover {
+  background: #3ad0e0;
+  box-shadow: 0 0 15px #50e5ff;
+}
+
+.reset {
+  background: #444;
+  color: #fff;
+}
+
+.reset:hover {
+  background: #555;
+}
+</style>
+
+
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
