@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="background"></div>
+ 
+  <div style="height: 80px;"></div> <!-- Spacer to avoid content under navbar -->
+
+
+  <header class="header">
+    <!-- You can add a logo or name here -->
+    <h1>Sukhdeep Sandhu</h1>
+  </header>
+  <div style="height: 5px;"></div>
+  <p>Hello! My name is Sukhdeep, and I just recently graduated from Computer Science at Concordia University.
+    Two of the things I enjoy the most about programming are creating cool things, and problem solving. 
+    I mainly code in Java, Python, Javascript and C#. My interests include studying astronomy, going to the gym,
+    playing basketball, playing video games, and spending time with my family. I am excited to meet and work with
+    new people, and contribute to a positive and collaborative environment. </p>
+
+    <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="portfolio.html"><i class="fas fa-folder"></i> Portfolio</a></li>
+      <li><a href="resume.html"><i class="fas fa-file-lines"></i> Resume</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+   <!-- Spacer to prevent navbar overlap -->
+   <div style="height:20px;"></div>
+
+
+  <main class="gallery">
+    <!-- Replace # with your image links and update captions -->
+    <div class="image-card">
+      <img src="ChessAI.png" alt="Project 1" />
+      <div class="caption">Caption 1</div>
+    </div>
+    <div class="image-card">
+      <img src="SpaceBlack.png" alt="Project 2" />
+      <div class="caption">Caption 2</div>
+    </div>
+    <div class="image-card">
+      <img src="SpaceBlack.png" alt="Project 3" />
+      <div class="caption">Caption 3</div>
+    </div>
+    <div class="image-card">
+      <img src="SpaceBlack.png" alt="Project 4" />
+      <div class="caption">Caption 4</div>
+    </div>
+    <div class="image-card">
+      <img src="SpaceBlack.png" alt="Project 5" />
+      <div class="caption">Caption 5</div>
+    </div>
+    <div class="image-card">
+      <img src="SpaceBlack.png" alt="Project 6" />
+      <div class="caption">Caption 6</div>
+    </div>
+  </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const trail = [];
+    const trailSize = 12;
+
+    for (let i = 0; i < trailSize; i++) {
+      const dot = document.createElement("div");
+      dot.className = "cursor-trail";
+      document.body.appendChild(dot);
+      trail.push({ element: dot, x: 0, y: 0 });
+    }
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+
+    document.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    function animate() {
+      let x = mouseX;
+      let y = mouseY;
+
+      trail.forEach((dot, index) => {
+        const next = trail[index + 1] || { x: mouseX, y: mouseY };
+        dot.x += (next.x - dot.x) * 0.3;
+        dot.y += (next.y - dot.y) * 0.3;
+        dot.element.style.left = dot.x + "px";
+        dot.element.style.top = dot.y + "px";
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+</script>
+
+
+</body>
+</html>
