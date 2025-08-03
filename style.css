@@ -22,7 +22,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('8sand.github.io/thumbs/images/Space.jpg'); /* INSERT IMAGE URL */
+  background-image: url('8sand.github.io/refs/heads/main/images/thumbs/Space.jpg'); /* INSERT IMAGE URL */
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -183,15 +183,15 @@ p {
 
 .cursor-trail {
   position: fixed;
-  width: 5px;
-  height: 5px;
+  width: 10px;
+  height: 10px;
   background: #ffffff;
   border-radius: 50%;
   pointer-events: none;
-  mix-blend-mode: difference; /* optional cool blending effect */
-  opacity: 0.5;
+  mix-blend-mode: hard-light; 
+  opacity: 0.1;
   transform: translate(-50%, -50%);
-  transition: all 0.15s ease-out;
+  transition: all 0.40s ease-out;
   z-index: 9999;
   box-shadow: 0 0 8px #ffffff;
 

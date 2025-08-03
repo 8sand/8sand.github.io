@@ -39,29 +39,29 @@
 
 
   <main class="gallery">
-    <!-- Replace # with your image links and update captions -->
+    <!-- Gallery imges with captions -->
     <div class="image-card">
-      <img src="8sand.github.io/thumbs/images/ChessAI.png" alt="Project 1" />
+      <img src="8sand.github.io/refs/heads/main/images/thumbs/ChessAI.png" alt="Project 1" />
       <div class="caption">Caption 1</div>
     </div>
     <div class="image-card">
-      <img src="8sand.github.io/thumbs/images/SpaceBlack.png" alt="Project 2" />
+      <img src="8sand.github.io/refs/heads/main/images/thumbs/SpaceBlack.png" alt="Project 2" />
       <div class="caption">Caption 2</div>
     </div>
     <div class="image-card">
-      <img src="8sand.github.io/thumbs/images/SpaceBlack.png" alt="Project 3" />
+      <img src="8sand.github.io/refs/heads/main/images/thumbs/SpaceBlack.png" alt="Project 3" />
       <div class="caption">Caption 3</div>
     </div>
     <div class="image-card">
-      <img src="8sand.github.io/thumbs/images/SpaceBlack.png" alt="Project 4" />
+      <img src="8sand.github.io/refs/heads/main/images/thumbs/SpaceBlack.png" alt="Project 4" />
       <div class="caption">Caption 4</div>
     </div>
     <div class="image-card">
-      <img src="8sand.github.io/thumbs/images/SpaceBlack.png" alt="Project 5" />
+      <img src="8sand.github.io/refs/heads/main/images/thumbs/SpaceBlack.png" alt="Project 5" />
       <div class="caption">Caption 5</div>
     </div>
     <div class="image-card">
-      <img src="8sand.github.io/thumbs/images/SpaceBlack.png" alt="Project 6" />
+      <img src="8sand.github.io/refs/heads/main/images/thumbs/SpaceBlack.png" alt="Project 6" />
       <div class="caption">Caption 6</div>
     </div>
   </main>
@@ -92,8 +92,8 @@
 
       trail.forEach((dot, index) => {
         const next = trail[index + 1] || { x: mouseX, y: mouseY };
-        dot.x += (next.x - dot.x) * 0.3;
-        dot.y += (next.y - dot.y) * 0.3;
+        dot.x += (next.x - dot.x) * 0.5;
+        dot.y += (next.y - dot.y) * 0.5;
         dot.element.style.left = dot.x + "px";
         dot.element.style.top = dot.y + "px";
       });
