@@ -27,6 +27,7 @@ body {
   background-position: center;
   z-index: -1;
   filter: brightness(0.6);
+  pointer-events: none;;
 }
 
 /* Header Styling */
@@ -139,6 +140,13 @@ p {
   justify-content: center;
   align-items: center;
 }
+
+.nav-menu a.active {
+  color: #00bfff; /* or any highlight color */
+  font-weight: bold;
+  border-bottom: 2px solid #00bfff;
+}
+
 
 /* Menu links */
 .nav-menu li a {
