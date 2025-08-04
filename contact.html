@@ -38,16 +38,24 @@
 <p style="text-align: center;">Work in progress, please don't send yet.</p>
     <!-- Main content for contact page -->
 <section class="contact-section">
-  <form class="contact-form">
+  <form class="contact-form" action="https://formsubmit.co/ssandhu1999@gmail.com" method="POST">
+    <!-- Optional hidden inputs -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New portfolio message!">
+    <input type="hidden" name="_template" value="box">
+
+    <!-- User inputs -->
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
     <div class="button-group">
       <button type="submit" class="btn send">Send</button>
       <button type="reset" class="btn reset">Reset</button>
     </div>
   </form>
 </section>
+
 
 <style>
 .contact-section {
