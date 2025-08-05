@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = height;
 
   const trail = [];
-  const maxTrailLength = 100;
+  const maxTrailLength = 10;
 
   window.addEventListener("resize", () => {
     width = window.innerWidth;
