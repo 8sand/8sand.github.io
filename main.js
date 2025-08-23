@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gradient.addColorStop(1, "#0077ff");
 
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 2.5;
+      ctx.lineWidth = 40;
       ctx.shadowColor = "#00eaff";
       ctx.shadowBlur = 12;
       ctx.lineJoin = "round";
