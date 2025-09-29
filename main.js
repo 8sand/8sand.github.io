@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trail[trail.length - 1].y
       );
 
-      gradient.addColorStop(0, "#00e1ffff");
+      gradient.addColorStop(0, "#00d9ffff");
       gradient.addColorStop(1, "#00e1ffff");
       gradient.addColorStop(1, "#54ebffff");
       gradient.addColorStop(1, "#93fbffff");
