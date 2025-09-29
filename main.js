@@ -48,16 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
         trail[trail.length - 1].y
       );
 
-      gradient.addColorStop(0, "#e63838ff");
-      gradient.addColorStop(1, "#ffbb3dff");
-      gradient.addColorStop(1, "#f2ff3dff");
-      gradient.addColorStop(1, "#78e638ff");
-      gradient.addColorStop(1, "#3dffdfff");
-      gradient.addColorStop(1, "#b13dffff");
+      gradient.addColorStop(0, "#00e1ffff");
+      gradient.addColorStop(1, "#00e1ffff");
+      gradient.addColorStop(1, "#54ebffff");
+      gradient.addColorStop(1, "#93fbffff");
+      gradient.addColorStop(1, "#ffffffff");
 
       ctx.strokeStyle = gradient;
       ctx.lineWidth = 5;
-      ctx.shadowColor = "#551196ff";
+      ctx.shadowColor = "#000531ff";
       ctx.shadowBlur = 5;
       ctx.lineJoin = "round";
       ctx.lineCap = "round";
