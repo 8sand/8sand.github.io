@@ -78,7 +78,9 @@ p {
   border-radius: 12px; /* optional rounded corners */
   max-width: 1200px; /* constrain width for aesthetics */
   margin: 2rem auto; /* center horizontally with margin on top and bottom */
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); /* subtle shadow for depth */
+  box-shadow:
+  0 25px 80px rgba(0, 0, 0, 0.9),
+  0 0 140px rgba(0, 0, 0, 0.7); /* subtle shadow for depth */
   z-index: 1; /* make sure it's above the background */
 }
 
