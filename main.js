@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.height = height;
 
   const trail = [];
-  const maxTrailLength = 10;
+  const maxTrailLength = 15;     // longer = smoother fade
+  const fadeSpeed = 0.15;        // higher = faster fade
 
   window.addEventListener("resize", () => {
     width = window.innerWidth;
@@ -27,40 +28,41 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("mousemove", (e) => {
-    trail.push({ x: e.clientX, y: e.clientY });
+    trail.push({
+      x: e.clientX,
+      y: e.clientY,
+      life: 1 // opacity life
+    });
+
     if (trail.length > maxTrailLength) trail.shift();
   });
 
   function drawTrail() {
     ctx.clearRect(0, 0, width, height);
 
-    if (trail.length > 1) {
+    for (let i = 0; i < trail.length - 1; i++) {
+      const p1 = trail[i];
+      const p2 = trail[i + 1];
+
+      p1.life -= fadeSpeed;
+      if (p1.life <= 0) continue;
+
       ctx.beginPath();
-      ctx.moveTo(trail[0].x, trail[0].y);
-      for (let i = 1; i < trail.length; i++) {
-        ctx.lineTo(trail[i].x, trail[i].y);
-      }
+      ctx.moveTo(p1.x, p1.y);
+      ctx.lineTo(p2.x, p2.y);
 
-      const gradient = ctx.createLinearGradient(
-        trail[0].x,
-        trail[0].y,
-        trail[trail.length - 1].x,
-        trail[trail.length - 1].y
-      );
-
-      gradient.addColorStop(0, "#00d9ffff");
-      gradient.addColorStop(1, "#00e1ffff");
-      gradient.addColorStop(1, "#54ebffff");
-      gradient.addColorStop(1, "#93fbffff");
-      gradient.addColorStop(1, "#ffffffff");
-
-      ctx.strokeStyle = gradient;
-      ctx.lineWidth = 5;
-      ctx.shadowColor = "#000531ff";
-      ctx.shadowBlur = 5;
-      ctx.lineJoin = "round";
+      ctx.strokeStyle = `rgba(0, 217, 255, ${p1.life})`;
+      ctx.lineWidth = 2;          // 🔥 thinner
+      ctx.shadowColor = "rgba(0, 217, 255, 0.6)";
+      ctx.shadowBlur = 6;
       ctx.lineCap = "round";
+      ctx.lineJoin = "round";
       ctx.stroke();
+    }
+
+    // Remove dead points
+    while (trail.length && trail[0].life <= 0) {
+      trail.shift();
     }
 
     requestAnimationFrame(drawTrail);
