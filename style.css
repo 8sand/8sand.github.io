@@ -70,17 +70,15 @@ p {
   box-shadow: none;
 }
 
-/* Content 2nd backgorund */
+/* Content 2nd background */
 .content {
-  position: relative;  /* create a stacking context */
-  background-color: rgba(14, 14, 14, 0.192); /* black with 60% opacity */
+  position: relative; /* create a stacking context */
+  background-color: rgba(14, 14, 14, 0.6); /* stronger black with 60% opacity */
   padding: 2rem; /* some padding so text doesn't touch edges */
   border-radius: 12px; /* optional rounded corners */
   max-width: 1200px; /* constrain width for aesthetics */
   margin: 2rem auto; /* center horizontally with margin on top and bottom */
-  box-shadow:
-  0 25px 80px rgba(0, 0, 0, 0.9),
-  0 0 140px rgba(0, 0, 0, 0.7); /* subtle shadow for depth */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9); /* stronger shadow for depth */
   z-index: 1; /* make sure it's above the background */
 }
 
