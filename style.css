@@ -20,6 +20,7 @@
   align-items: center;
   padding: 1rem 0;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+
 }
 
 
@@ -91,7 +92,6 @@ body {
     opacity: 1;
   }
 }
-
 
 
 /* Paragraph Styling */
@@ -325,8 +325,6 @@ p {
 }
 
 
-  /* Footer */
-
 html, body {
   height: 100%;
   margin: 0;
@@ -345,33 +343,42 @@ html, body {
 /* Typing effect on homepage */
 
 .typing-wrapper {
-  text-align: center;
-  margin-top: 2rem;
-  position: relative; /* must be positioned for z-index */
-  z-index: 10; /* below navbar (1000) but above background) */
-}
+  margin-top: 5px; /* space below navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;   /* creates stacking context */
+  z-index: 1;           /* stays under navbar */
+  min-height: 2.5rem; /* 🔑 keeps page from shifting */
 
+}
 
 .typing-container {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', monospace;
   font-size: 2rem;
-  color: #00ffff; /* bright cyan */
+  font-weight: 600; /* slightly bold */
+  color: #4df9ff;
   white-space: nowrap;
-  border-right: 2px solid #00ffff; /* cursor line */
-  overflow: hidden;
-  display: inline-block;
-  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff;
+  border-right: 2px solid #00d9ff;
 }
 
+/* Footer */
 
 .footer {
-  background-color: #000000;
+  position: relative;          /* stays in normal flow */
+  width: 100vw;
+  z-index: 2;
+
+  background: rgba(0, 0, 0, 0.521);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem 0;
   color: #50e5ff;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  font-size: 0.3rem;
+
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
 }
-
-
-

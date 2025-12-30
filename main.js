@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.style.top = "0";
   canvas.style.left = "0";
   canvas.style.pointerEvents = "none";
-  canvas.style.zIndex = "9999";
+  canvas.style.zIndex = "500";
+
+
 
   let width = window.innerWidth;
   let height = window.innerHeight;
@@ -75,12 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
 //Typing effect 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const words = ["programming", "cybersecurity", "design", "team-work", "buscccchhhh :3"];
+  const words = ["programming", "cybersecurity", "design", "team-work", "problem-solving"];
   const typingElement = document.getElementById("typing");
   let wordIndex = 0;
   let charIndex = 0;
   let typing = true;
-  const speed = 150;
+  const speed = 50;
 
   function type() {
     const currentWord = words[wordIndex];
