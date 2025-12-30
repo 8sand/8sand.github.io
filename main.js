@@ -70,3 +70,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   drawTrail();
 });
+
+
+//Typing effect 
+
+const words = ["programming", "cybersecurity", "design", "team-work"];
+const typingElement = document.getElementById("typing");
+let wordIndex = 0;
+let charIndex = 0;
+let typing = true; // typing or deleting
+const speed = 150; // typing speed in ms
+
+function type() {
+  const currentWord = words[wordIndex];
+
+  if (typing) {
+    typingElement.textContent = currentWord.slice(0, charIndex + 1);
+    charIndex++;
+    if (charIndex === currentWord.length) {
+      typing = false;
+      setTimeout(type, 1000); // wait before deleting
+      return;
+    }
+  } else {
+    typingElement.textContent = currentWord.slice(0, charIndex - 1);
+    charIndex--;
+    if (charIndex === 0) {
+      typing = true;
+      wordIndex = (wordIndex + 1) % words.length;
+    }
+  }
+
+  setTimeout(type, speed);
+}
+
+type();
+
