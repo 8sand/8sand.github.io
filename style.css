@@ -363,30 +363,52 @@ html, body {
 }
 
 /* Music Player Bar */
-.music-player {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  height: 60px;
-  z-index: 900; /* below navbar (1000) */
-  border-radius: 14px;
-  overflow: hidden;
+/* Centered Audio Player */
+.audio-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  position: relative;
+  z-index: 5;
+}
 
-  background: rgba(0, 0, 0, 0.4);
+.audio-player {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 14px 18px;
+  border-radius: 16px;
+
+  background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(12px);
 
   box-shadow:
-    0 0 15px rgba(0, 217, 255, 0.25),
-    inset 0 0 10px rgba(0, 217, 255, 0.15);
+    0 0 18px rgba(80, 229, 255, 0.35),
+    inset 0 0 12px rgba(80, 229, 255, 0.2);
 }
 
-/* YouTube iframe styling */
-.music-player iframe {
-  width: 100%;
-  height: 100%;
-  filter: saturate(1.1) brightness(0.95);
+.audio-player button {
+  background: none;
+  border: none;
+  color: #50e5ff;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
+
+.audio-player button:hover {
+  transform: scale(1.15);
+  color: #00ffff;
+}
+
+
+.audio-player input[type="range"] {
+  width: 120px;
+  accent-color: #50e5ff;
+  cursor: pointer;
+}
+
 
 
 /* Footer */

@@ -112,12 +112,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Music player - unmutes on first click anywhere
+const audio = document.getElementById("bg-audio");
+const toggleBtn = document.getElementById("audio-toggle");
+const volumeSlider = document.getElementById("audio-volume");
+const icon = toggleBtn.querySelector("i");
 
+// Start audio on first user interaction
 document.addEventListener("click", () => {
-  const iframe = document.getElementById("yt-player");
-  if (!iframe) return;
-
-  if (!iframe.src.includes("mute=0")) {
-    iframe.src = iframe.src.replace("mute=1", "mute=0");
-  }
+  audio.volume = volumeSlider.value;
+  audio.play();
+  icon.classList.replace("fa-play", "fa-pause");
 }, { once: true });
+
+// Play / Pause toggle
+toggleBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    icon.classList.replace("fa-play", "fa-pause");
+  } else {
+    audio.pause();
+    icon.classList.replace("fa-pause", "fa-play");
+  }
+});
+
+// Volume control
+volumeSlider.addEventListener("input", () => {
+  audio.volume = volumeSlider.value;
+});
+

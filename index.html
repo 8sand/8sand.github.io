@@ -79,14 +79,27 @@ Hi, I'm Sukhdeep! I’m a Computer Science graduate from Concordia University, s
 </main>
 
 <!-- Background Music Player -->
-<div class="music-player">
-  <iframe
-    id="yt-player"
-    src="https://www.youtube.com/embed/COA5sAhN17g?autoplay=1&mute=1&loop=1&playlist=COA5sAhN17g&controls=1&modestbranding=1"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+
+<div class="audio-wrapper">
+  <audio id="bg-audio" loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+
+  <div class="audio-player">
+    <button id="audio-toggle">
+      <i class="fas fa-play"></i>
+    </button>
+
+    <input
+      type="range"
+      id="audio-volume"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.6"
+    />
+  </div>
 </div>
 
 
