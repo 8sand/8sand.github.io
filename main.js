@@ -109,3 +109,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   type();
 });
+
+
+// Music player - unmutes on first click anywhere
+
+document.addEventListener("click", () => {
+  const iframe = document.getElementById("yt-player");
+  if (!iframe) return;
+
+  if (!iframe.src.includes("mute=0")) {
+    iframe.src = iframe.src.replace("mute=1", "mute=0");
+  }
+}, { once: true });
