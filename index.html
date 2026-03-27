@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sukhdeep Portfolio 2026</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">SS<span class="accent">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-status"><span class="status-dot"></span>Available for opportunities</div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="line"></span>
+        <span class="mono">PORTFOLIO_2026</span>
+      </div>
+      <h1 class="hero-name">Sukhdeep<br/><span class="outline-text">Sandhu</span></h1>
+      <div class="typewriter-wrapper">
+        <span class="mono typewriter-prefix">$ ./whoami —&gt;&nbsp;</span>
+        <span class="mono typewriter-text" id="typewriter"></span>
+        <span class="cursor-blink">█</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Work</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-decoration">
+      <div class="hex-grid">
+        <div class="hex"></div><div class="hex"></div><div class="hex"></div>
+        <div class="hex"></div><div class="hex active"></div><div class="hex"></div>
+        <div class="hex"></div><div class="hex"></div><div class="hex active"></div>
+        <div class="hex"></div><div class="hex active"></div><div class="hex"></div>
+      </div>
+      <div class="scan-line"></div>
+    </div>
+    <div class="scroll-hint">
+      <span class="mono">scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <span class="mono section-tag">// 01</span>
+      <h2>About<span class="accent">.</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-image-block">
+        <div class="image-placeholder">
+          <img src="https://raw.githubusercontent.com/8sand/8sand.github.io/c25c5228f62c2694be7ea4821c79aa26ad0f5ae0/images/thumbs/Untitled.png" alt="Sukhdeep Sandhu" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div class="corner tl"></div>
+          <div class="corner tr"></div>
+          <div class="corner bl"></div>
+          <div class="corner br"></div>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-number">10+</span><span class="stat-label">Years Coding</span></div>
+          <div class="stat"><span class="stat-number">5+</span><span class="stat-label">Projects Built</span></div>
+          <div class="stat"><span class="stat-number">8+</span><span class="stat-label">Programming Langs</span></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="lead">I've been into computers for as long as I can remember.</p>
+        <p>I was always the kid messing around with things just to see how they worked — or how they could break. My first real exposure to cybersecurity was when I was about nine, figuring out how to exploit a loophole in Club Penguin's coin system. What started as a simple attempt to get more in-game currency ended up planting a seed of ingenuity and curiosity about how systems can be understood, tested, and improved.</p>
+        <p>I studied Science at Dawson College and later earned my <strong>Bachelor's in Computer Science from Concordia</strong>. Over time, I realized I'm most drawn to the side of tech that involves problem-solving and thinking a bit differently — so cybersecurity ended up being a natural fit.</p>
+        <p>Outside of that, I like to stay active, working out and playing basketball regularly. I also read a lot of fantasy and sci-fi, and I'm into amateur astronomy.</p>
+        <div class="skills-grid">
+          <div class="skill-tag"><span class="mono">Python</span></div>
+          <div class="skill-tag"><span class="mono">Java</span></div>
+          <div class="skill-tag"><span class="mono">JavaScript</span></div>
+          <div class="skill-tag"><span class="mono">Cybersecurity</span></div>
+          <div class="skill-tag"><span class="mono">AI / Automation</span></div>
+          <div class="skill-tag"><span class="mono">Web Dev</span></div>
+          <div class="skill-tag"><span class="mono">Linux</span></div>
+          <div class="skill-tag"><span class="mono">Git</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="mono section-tag">// 02</span>
+      <h2>Projects<span class="accent">.</span></h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card" data-index="01">
+        <div class="card-top">
+          <span class="mono card-tag">CYBERSECURITY</span>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link" title="Live Demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>Network Vulnerability Scanner</h3>
+        <p>A Python-based tool that automates network reconnaissance, identifies open ports, and maps potential attack surfaces with detailed reporting.</p>
+        <div class="card-stack">
+          <span>Python</span><span>Scapy</span><span>Nmap</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-index="02">
+        <div class="card-top">
+          <span class="mono card-tag">AI / AUTOMATION</span>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link" title="Live Demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>AI Threat Intelligence Pipeline</h3>
+        <p>Automated threat feed aggregation using LLM summarization to distill CVE reports and security advisories into actionable alerts.</p>
+        <div class="card-stack">
+          <span>Python</span><span>OpenAI API</span><span>Bash</span>
+        </div>
+      </div>
+
+      <div class="project-card" data-index="03">
+        <div class="card-top">
+          <span class="mono card-tag">WEB DEVELOPMENT</span>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link" title="Live Demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>Secure Auth Web App</h3>
+        <p>Full-stack web application implementing JWT authentication, rate limiting, and OWASP best practices with a modern React frontend.</p>
+        <div class="card-stack">
+          <span>React</span><span>Node.js</span><span>JWT</span>
+        </div>
+      </div>
+
+      <div class="project-card featured" data-index="04">
+        <div class="card-top">
+          <span class="mono card-tag">FEATURED</span>
+          <div class="card-links">
+            <a href="#" class="card-link" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="card-link" title="Live Demo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>[ Your Featured Project ]</h3>
+        <p>Add your most impressive or complex project here. Describe what problem it solves, what you built, and what makes it stand out. This card spans two columns for emphasis.</p>
+        <div class="card-stack">
+          <span>Add</span><span>Your</span><span>Stack</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="mono section-tag">// 03</span>
+      <h2>Contact<span class="accent">.</span></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p class="lead">Have a project, opportunity, or just want to connect? Let's talk.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <span class="mono contact-label">EMAIL</span>
+            <a href="mailto:ssandhu1999@gmail.com" class="contact-value">ssandhu1999@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="mono contact-label">PHONE</span>
+            <a href="tel:5145945444" class="contact-value">+1 (514) 594-5444</a>
+          </div>
+          <div class="contact-item">
+            <span class="mono contact-label">LOCATION</span>
+            <span class="contact-value">Montréal, QC, Canada</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/8sand" target="_blank" class="social-btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/sukhdeep-sandhu-318a911a1/" target="_blank" class="social-btn">LinkedIn</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label class="mono" for="name">NAME</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label class="mono" for="email">EMAIL</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label class="mono" for="subject">SUBJECT</label>
+          <input type="text" id="subject" name="subject" placeholder="Let's work together" required />
+        </div>
+        <div class="form-group">
+          <label class="mono" for="message">MESSAGE</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width" id="submitBtn">
+          <span>Send Message</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        </button>
+        <div class="form-status" id="formStatus"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="mono">© 2026 Sukhdeep Sandhu</span>
+      <div class="footer-links">
+        <a href="#hero">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
