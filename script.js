@@ -35,8 +35,7 @@ window.addEventListener('scroll', () => {
 const phrases = [
   'BSc Computer Science',
   'Google Cybersecurity Certificate',
-  'AI & Automation Engineer',
-  'Proficient in Python · Java · JS',
+  'Proficient in SQL and Linux',
   'Full-Stack Web Developer',
   'Team-Oriented Collaborator',
   'Security-First Mindset',
